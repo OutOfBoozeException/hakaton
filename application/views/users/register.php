@@ -40,7 +40,7 @@
 				<?php echo form_open('users/register'); ?>
 
 					<span class="login100-form-title p-b-59">
-						Login
+						<?php echo $title;?>
 					</span>
 
 					<div class="wrap-input100 validate-input" data-validate="Username is required">
@@ -77,7 +77,7 @@
 						<div class="wrap-login100-form-btn">
 							<div class="login100-form-bgbtn"></div>
 							<button class="login100-form-btn" style="background-color: #f4623a !important">
-								Login
+								<?php echo $title;?>
 							</button>
 						</div>
 
