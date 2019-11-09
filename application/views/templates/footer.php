@@ -1,9 +1,8 @@
 <script>
 			CKEDITOR.replace( 'editor1' );
 		</script>
-		<br/><br/><br/><br/><br/>
-		<div class="foot col-md-8 col-md-offset-2">
-			May the Force be with you!
+		<div class="foot">
+			<img src="https://i.imgur.com/g6uKIvh.png" style="float:right; margin-right:40px">
 		</div>
 	</body>
 </html>
