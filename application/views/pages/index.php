@@ -11,17 +11,17 @@
   <title>LeafSaver</title>
 
   <!-- Font Awesome Icons -->
-  <link href="<?php echo base_url() . 'assets/vendor/fontawesome-free/css/all.min.css' ?>" rel="stylesheet" type="text/css">
+  <link href="<?php echo base_url() . 'assets/index/vendor/fontawesome-free/css/all.min.css' ?>" rel="stylesheet" type="text/css">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet">
   <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
 
   <!-- Plugin CSS -->
-  <link href="<?php echo base_url() . 'assets/vendor/magnific-popup/magnific-popup.css' ?>" rel="stylesheet">
+  <link href="<?php echo base_url() . 'assets/index/vendor/magnific-popup/magnific-popup.css' ?>" rel="stylesheet">
 
   <!-- Theme CSS - Includes Bootstrap -->
-  <link href="<?php echo base_url() . 'assets/css/creative.min.css' ?>" rel="stylesheet">
+  <link href="<?php echo base_url() . 'assets/index/css/creative.min.css' ?>" rel="stylesheet">
 
 </head>
 
@@ -62,7 +62,9 @@
           <hr class="divider my-4">
         </div>
         <div class="col-lg-8 align-self-baseline">
-          <p class="text-white-75 font-weight-light mb-5">Start Bootstrap can help you build better websites using the Bootstrap framework! Just download a theme and start customizing, no strings attached!</p>
+          <p class="text-white-75 font-weight-light mb-5">The variety of symptoms, the external expressions of disease, that result from any disease form the symptom complex, which, together with the accompanying signs, makes up the syndrome of the disease.
+
+</p>
           <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a>
         </div>
       </div>
@@ -247,15 +249,15 @@
   </footer>
 
   <!-- Bootstrap core JavaScript -->
-  <script src="<?php echo base_url() . 'assets/vendor/jquery/jquery.min.js' ?>"></script>
-  <script src="<?php echo base_url() . 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' ?>"></script>
+  <script src="<?php echo base_url() . 'assets/index/vendor/jquery/jquery.min.js' ?>"></script>
+  <script src="<?php echo base_url() . 'assets/index/vendor/bootstrap/js/bootstrap.bundle.min.js' ?>"></script>
 
   <!-- Plugin JavaScript -->
-  <script src="<?php echo base_url() . 'assets/vendor/jquery-easing/jquery.easing.min.js' ?>"></script>
-  <script src="<?php echo base_url() . 'assets/vendor/magnific-popup/jquery.magnific-popup.min.js' ?>"></script>
+  <script src="<?php echo base_url() . 'assets/index/vendor/jquery-easing/jquery.easing.min.js' ?>"></script>
+  <script src="<?php echo base_url() . 'assets/index/vendor/magnific-popup/jquery.magnific-popup.min.js' ?>"></script>
 
   <!-- Custom scripts for this template -->
-  <script src="<?php echo base_url() . 'assets/js/creative.min.js' ?>"></script>
+  <script src="<?php echo base_url() . 'assets/index/js/creative.min.js' ?>"></script>
 
 </body>
 
