@@ -9,11 +9,9 @@ class Data_model extends CI_Model{
                            FROM cure
                             LEFT JOIN drug ON cure.drugId=drug.id
                             LEFT JOIN  disease ON disease.id=cure.diseaseId
-                            WHERE disease.name=$diseaseName");
+                            WHERE disease.name='".$diseaseName."'");
         
-       if (!$query->result()){
-           show404();
-       }
+       
        return $query->result();
     }
     

@@ -1,5 +1,8 @@
 <html>
 	<head>
+	<script language="JavaScript" type="text/javascript" src="http://code.jquery.com/jquery-1.2.6.js"></script>
+<script language="JavaScript" type="text/javascript" src="http://code.jquery.com/jquery-1.2.6.pack.js></script>
+<script language="JavaScript" type="text/javascript" src="/js/sprinkle.js"></script>
 		<title>LeafSaver</title>
 		<link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.min.css">
 		<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/style.css">
