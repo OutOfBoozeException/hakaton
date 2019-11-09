@@ -7,9 +7,9 @@ class Pages extends CI_Controller{
 			
 			if ($page != 'index') {
 				$data['title']=ucfirst($page);
-				$this->load->view('templates/header');
+				//$this->load->view('templates/header');
 				$this->load->view('pages/'.$page,$data);
-				$this->load->view('templates/footer');
+				//$this->load->view('templates/footer');
 			}
 			else {
 				$data['title']=ucfirst($page);
