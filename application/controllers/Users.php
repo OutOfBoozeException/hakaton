@@ -4,7 +4,7 @@
 
 class Users extends CI_Controller{
     public function register(){
-        var_dump("Na register sams");
+        
         $data['title'] = 'Sign Up';
         $this->form_validation->set_rules('username','Username','required|callback_check_username_exists');
         $this->form_validation->set_rules('password','Password','required');
@@ -40,7 +40,8 @@ class Users extends CI_Controller{
                 $user_data = array(
                     'user_id' => $user_id,
                     'username' => $username,
-                    'logged_in' => true
+                    'logged_in' => true,
+                    'currentPics'=>0
                 );
                 $this->session->set_userdata($user_data);
                 $this->session->set_flashdata('user_loggedin', 'You are now logged in');
