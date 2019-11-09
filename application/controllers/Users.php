@@ -11,9 +11,9 @@ class Users extends CI_Controller{
         $this->form_validation->set_rules('password','Password','required');
         $this->form_validation->set_rules('password2','Confirm Password','matches[password]');
         if ($this->form_validation->run() === FALSE){
-            $this->load->view('templates/header');
+            //$this->load->view('templates/header');
             $this->load->view('users/register', $data);
-            $this->load->view('templates/footer');
+            //$this->load->view('templates/footer');
         }
         else {
             $enc_password = md5($this->input->post('password'));

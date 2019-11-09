@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Login V13</title>
+	<title>LeafSaver Login</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
@@ -33,7 +33,7 @@
 	
 	<div class="limiter">
 		<div class="container-login100">
-			<div class="login100-more" style="background-image: url('https://images.pexels.com/photos/3153520/pexels-photo-3153520.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');"></div>
+			<div class="login100-more" style="background-image: url('https://images.pexels.com/photos/1029596/pexels-photo-1029596.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');"></div>
 
 			<div class="wrap-login100 p-l-50 p-r-50 p-t-72 p-b-50">
 				<!--<form class="login100-form validate-form">-->
