@@ -8,34 +8,31 @@
 		<link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
 	</head>
-	<body>
-	<nav class="navbar navbar-expand-lg">
+	<body style="background-image: url('https://images.pexels.com/photos/911738/pexels-photo-911738.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260')">
+	<nav class="navbar navbar-expand-lg" style="background-color:#ffffff !important">
 		<div class="container">
-			<a class="navbar-brand" href="<?php echo base_url(); ?>">LeafSaver</a>
+			<a class="navbar-brand" href="<?php echo base_url(); ?>" style="color: #f4623a !important; font-weight: 800 !important;">LeafSaver</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
 			<div class="collapse navbar-collapse" id="navbarColor01">
 				<ul class="nav navbar-nav navbar-right">
 
-					<?php if(!$this->session->userdata('logged_in')): ?>
-						<li class="nav-item">
-							<a class="nav-link" href="<?php echo base_url(); ?>users/login">Login</a>
+					<?php if(!$this->session->userdata('logged_in')): 
+						header("Location: " . base_url()); 
+						exit();	
+					?>
+						<!--<li class="nav-item">
+							<a class="nav-link" href="<?php //echo base_url(); ?>users/login">Login</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="<?php echo base_url(); ?>users/register">Register</a>
-						</li>
+							<a class="nav-link" href="<?php //echo base_url(); ?>users/register">Register</a>
+						</li>-->
 					<?php endif; ?>
 
 					<?php if($this->session->userdata('logged_in')): ?>
 						<li class="nav-item">
-							<a class="nav-link" href="<?php echo base_url(); ?>posts/create">Create Post</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="<?php echo base_url(); ?>categories/create">Create Category</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="<?php echo base_url(); ?>users/logout">Logout</a>
+							<a class="nav-link" href="<?php echo base_url(); ?>users/logout" style="color: #f4623a !important; font-weight: 800 !important;">Logout</a>
 						</li>
 					<?php endif; ?>
 				</ul>
@@ -43,7 +40,7 @@
 		</div>
 	</nav>
 
-	<div class="container">
+	<div class="container" style="background-color:#ffffff !important">
 		<?php if ($this->session->flashdata('user_registered')): ?>
 			<?php echo '<p class="alert alert-success">'.$this->session->flashdata('user_registered').'</p>'; ?>
 		<?php endif; ?>
