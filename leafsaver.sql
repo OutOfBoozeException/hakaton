@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 10, 2019 at 03:56 PM
+-- Generation Time: Nov 10, 2019 at 04:39 PM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.3.11
 
@@ -110,6 +110,51 @@ CREATE TABLE `drug` (
   `producerId` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `drug`
+--
+
+INSERT INTO `drug` (`id`, `name`, `producerId`) VALUES
+(1, 'Benfuracarb', 1),
+(2, 'Cyflumetofen', 1),
+(3, 'Flutianil', 1),
+(4, 'Kaligreen', 1),
+(5, 'Acaritouch', 1),
+(6, 'Benzofenap', 1),
+(7, 'Benfuresate', 1),
+(8, 'Amistar Extra 280 SC', 2),
+(9, 'Artea 330 EC', 2),
+(10, 'Bravo 720 SC', 2),
+(11, 'Certicor 050 FS', 2),
+(12, 'Cherokee 487,5 SE', 2),
+(13, 'Chorus 50 WG', 2),
+(14, 'Dividend M 030 FS', 2),
+(15, 'Folio Gold 537.5 SC', 2),
+(16, 'Acceleron™', 3),
+(17, 'Adengo™', 3),
+(18, 'Alion™', 3),
+(19, 'Belt™', 3),
+(20, 'Confidor™', 3),
+(21, 'Harness™ Branded Herbicides', 3),
+(22, 'Prosaro™', 3),
+(23, 'Roundup™', 4),
+(24, 'Stratego™', 4),
+(25, 'Warrant™ Herbicide', 4),
+(26, 'Xpro™', 4),
+(27, 'Acephate', 5),
+(28, 'Dichlorvos', 5),
+(29, 'Methomyl', 5),
+(30, 'Pyridaben', 6),
+(31, 'Imidacloprid', 6),
+(32, 'Esfenvalerate', 6),
+(33, 'Dicofol', 7),
+(34, 'Diflubenzuron', 7),
+(35, 'Metolachlor', 8),
+(36, 'Oxyfluorfen', 8),
+(37, 'Propazine', 8),
+(38, 'Pendimethalin', 8),
+(39, 'Aldicarb sulfoxide', 8);
+
 -- --------------------------------------------------------
 
 --
@@ -209,7 +254,7 @@ ALTER TABLE `disease`
 -- AUTO_INCREMENT for table `drug`
 --
 ALTER TABLE `drug`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 
 --
 -- AUTO_INCREMENT for table `producer`
