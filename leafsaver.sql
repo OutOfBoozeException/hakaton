@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 10, 2019 at 04:39 PM
+-- Generation Time: Nov 10, 2019 at 02:15 AM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.3.11
 
@@ -33,6 +33,15 @@ CREATE TABLE `cure` (
   `drugId` int(11) NOT NULL,
   `instructions` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `cure`
+--
+
+INSERT INTO `cure` (`diseaseId`, `drugId`, `instructions`) VALUES
+(7, 16, NULL),
+(7, 17, 'proba123123'),
+(7, 28, NULL);
 
 -- --------------------------------------------------------
 
@@ -107,53 +116,54 @@ INSERT INTO `disease` (`id`, `name`) VALUES
 CREATE TABLE `drug` (
   `id` int(11) NOT NULL,
   `name` varchar(50) NOT NULL,
-  `producerId` int(11) NOT NULL
+  `producerId` int(11) NOT NULL,
+  `description` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `drug`
 --
 
-INSERT INTO `drug` (`id`, `name`, `producerId`) VALUES
-(1, 'Benfuracarb', 1),
-(2, 'Cyflumetofen', 1),
-(3, 'Flutianil', 1),
-(4, 'Kaligreen', 1),
-(5, 'Acaritouch', 1),
-(6, 'Benzofenap', 1),
-(7, 'Benfuresate', 1),
-(8, 'Amistar Extra 280 SC', 2),
-(9, 'Artea 330 EC', 2),
-(10, 'Bravo 720 SC', 2),
-(11, 'Certicor 050 FS', 2),
-(12, 'Cherokee 487,5 SE', 2),
-(13, 'Chorus 50 WG', 2),
-(14, 'Dividend M 030 FS', 2),
-(15, 'Folio Gold 537.5 SC', 2),
-(16, 'Acceleron™', 3),
-(17, 'Adengo™', 3),
-(18, 'Alion™', 3),
-(19, 'Belt™', 3),
-(20, 'Confidor™', 3),
-(21, 'Harness™ Branded Herbicides', 3),
-(22, 'Prosaro™', 3),
-(23, 'Roundup™', 4),
-(24, 'Stratego™', 4),
-(25, 'Warrant™ Herbicide', 4),
-(26, 'Xpro™', 4),
-(27, 'Acephate', 5),
-(28, 'Dichlorvos', 5),
-(29, 'Methomyl', 5),
-(30, 'Pyridaben', 6),
-(31, 'Imidacloprid', 6),
-(32, 'Esfenvalerate', 6),
-(33, 'Dicofol', 7),
-(34, 'Diflubenzuron', 7),
-(35, 'Metolachlor', 8),
-(36, 'Oxyfluorfen', 8),
-(37, 'Propazine', 8),
-(38, 'Pendimethalin', 8),
-(39, 'Aldicarb sulfoxide', 8);
+INSERT INTO `drug` (`id`, `name`, `producerId`, `description`) VALUES
+(1, 'Benfuracarb', 1, NULL),
+(2, 'Cyflumetofen', 1, NULL),
+(3, 'Flutianil', 1, NULL),
+(4, 'Kaligreen', 1, NULL),
+(5, 'Acaritouch', 1, NULL),
+(6, 'Benzofenap', 1, NULL),
+(7, 'Benfuresate', 1, NULL),
+(8, 'Amistar Extra 280 SC', 2, NULL),
+(9, 'Artea 330 EC', 2, NULL),
+(10, 'Bravo 720 SC', 2, NULL),
+(11, 'Certicor 050 FS', 2, NULL),
+(12, 'Cherokee 487,5 SE', 2, NULL),
+(13, 'Chorus 50 WG', 2, NULL),
+(14, 'Dividend M 030 FS', 2, NULL),
+(15, 'Folio Gold 537.5 SC', 2, NULL),
+(16, 'Acceleron™', 3, NULL),
+(17, 'Adengo™', 3, NULL),
+(18, 'Alion™', 3, NULL),
+(19, 'Belt™', 3, NULL),
+(20, 'Confidor™', 3, NULL),
+(21, 'Harness™ Branded Herbicides', 3, NULL),
+(22, 'Prosaro™', 3, NULL),
+(23, 'Roundup™', 4, NULL),
+(24, 'Stratego™', 4, NULL),
+(25, 'Warrant™ Herbicide', 4, NULL),
+(26, 'Xpro™', 4, NULL),
+(27, 'Acephate', 5, NULL),
+(28, 'Dichlorvos', 5, NULL),
+(29, 'Methomyl', 5, NULL),
+(30, 'Pyridaben', 6, NULL),
+(31, 'Imidacloprid', 6, NULL),
+(32, 'Esfenvalerate', 6, NULL),
+(33, 'Dicofol', 7, NULL),
+(34, 'Diflubenzuron', 7, NULL),
+(35, 'Metolachlor', 8, NULL),
+(36, 'Oxyfluorfen', 8, NULL),
+(37, 'Propazine', 8, NULL),
+(38, 'Pendimethalin', 8, NULL),
+(39, 'Aldicarb sulfoxide', 8, NULL);
 
 -- --------------------------------------------------------
 
@@ -200,9 +210,8 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `name`, `zipcode`, `email`, `username`, `password`, `register_date`) VALUES
-(1, 'pera', 'pera', 'pera@mailinator.com', 'pera', 'd8795f0d07280328f80e59b1e8414c49', '2018-10-18 23:27:27'),
-(2, 'test', 'test', 'test@gmail.com', 'test', '098f6bcd4621d373cade4e832627b4f6', '2018-10-18 23:28:47');
+INSERT INTO `users` (`id`, `firstname`, `lastname`, `email`, `username`, `password`, `register_date`) VALUES
+(3, 'Danilo', 'Sarovic', 'syndra11@gmail.com', 'share', '85e47ac07ac9d6416168a97e33fa969a', '2019-11-09 19:32:36');
 
 --
 -- Indexes for dumped tables
@@ -266,7 +275,7 @@ ALTER TABLE `producer`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Constraints for dumped tables
