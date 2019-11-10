@@ -214,6 +214,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `firstname`, `lastname`, `email`, `username`, `password`, `register_date`) VALUES
+(1, 'pera', 'pera', 'pera@mailinator.com', 'pera', 'd8795f0d07280328f80e59b1e8414c49', '2018-10-18 23:27:27'),
+(2, 'test', 'test', 'test@gmail.com', 'test', '098f6bcd4621d373cade4e832627b4f6', '2018-10-18 23:28:47'),
 (3, 'Danilo', 'Sarovic', 'syndra11@gmail.com', 'share', '85e47ac07ac9d6416168a97e33fa969a', '2019-11-09 19:32:36');
 
 --
