@@ -5,7 +5,7 @@ class Data_model extends CI_Model{
     }
     
     public function getCures($diseaseName){
-       $query= $this->db->query("SELECT drug.name, drug.id, cure.instructions
+       $query= $this->db->query("SELECT drug.name, drug.id
                            FROM cure
                             LEFT JOIN drug ON cure.drugId=drug.id
                             LEFT JOIN  disease ON disease.id=cure.diseaseId
@@ -19,7 +19,7 @@ class Data_model extends CI_Model{
                                   WHERE cure.diseaseId=$diseaseId AND cure.drugId=$drugId");
         
         if (!$query->result()){
-            show404();
+            show_404();
         }
         return $query->first_row('array');
     }
@@ -29,18 +29,18 @@ class Data_model extends CI_Model{
                                   WHERE disease.id=$diseaseId");
         
         if (!$query->result()){
-            show404();
+            show_404();
         }
         
         return $query->first_row('array');
     }
     
     public function getInstruction($diseaseId, $drugId) {
-        $query= $this->db->query("SELECT cure.instruction FROM cure 
+        $query= $this->db->query("SELECT cure.instructions FROM cure 
                                   WHERE cure.diseaseId=$diseaseId AND cure.drugId=$drugId" );
         
         if (!$query->result()){
-            show404();
+            show_404();
         }
         
         return $query->first_row('array');
@@ -51,7 +51,7 @@ class Data_model extends CI_Model{
                                   WHERE drug.id=$drugId");
         
         if (!$query->result()){
-            show404();
+            show_404();
         }
 
         return $query->first_row('array');
@@ -62,7 +62,7 @@ class Data_model extends CI_Model{
                                   WHERE producer.id=$producerId");
         
         if (!$query->result()){
-            show404();
+            show_404();
         }
       
         return $query->first_row('array');
@@ -73,7 +73,7 @@ class Data_model extends CI_Model{
                                   WHERE users.id=$userId");
         
         if (!$query->result()){
-            show404();
+            show_404();
         }
         return $query->result->first_row('array');
     }
@@ -86,6 +86,19 @@ class Data_model extends CI_Model{
         $prod=$this->Data_model->getProducerById($drug['producerId']);
         $merge=array_merge($drug,$prod);
         return $merge;
+    }
+    
+    public function getDiseaseByName($name){
+    
+    
+        $query= $this->db->query("SELECT nice_name,id FROM disease
+                                  WHERE name='".$name."'");
+        
+        if (!$query->result()){
+            show_404();
+        }
+        
+        return $query->first_row('array');
     }
     
 }

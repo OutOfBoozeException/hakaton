@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 10, 2019 at 02:15 AM
+-- Generation Time: Nov 10, 2019 at 07:52 AM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.3.11
 
@@ -41,7 +41,9 @@ CREATE TABLE `cure` (
 INSERT INTO `cure` (`diseaseId`, `drugId`, `instructions`) VALUES
 (7, 16, NULL),
 (7, 17, 'proba123123'),
-(7, 28, NULL);
+(7, 28, NULL),
+(9, 18, 'U 500ml izvorske vode rastvoriti 100ml leka hehe.'),
+(9, 28, 'U 1500ml izvorske vode rastvoriti 1020ml leka hehe.');
 
 -- --------------------------------------------------------
 
@@ -51,61 +53,62 @@ INSERT INTO `cure` (`diseaseId`, `drugId`, `instructions`) VALUES
 
 CREATE TABLE `disease` (
   `id` int(11) NOT NULL,
-  `name` varchar(50) NOT NULL
+  `name` varchar(50) NOT NULL,
+  `nice_name` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `disease`
 --
 
-INSERT INTO `disease` (`id`, `name`) VALUES
-(1, 'Apple Leaf Counts'),
-(2, 'Apple_Cedar Apple Rust'),
-(3, 'Apple Leaf Counts'),
-(4, 'Apple_Cedar Apple Rust'),
-(5, 'Apple_Frogeye Spot'),
-(6, 'Apple_Healthy'),
-(7, 'Apple_Scab'),
-(8, 'Blueberry Leaf Counts'),
-(9, 'Blueberry_Healthy'),
-(10, 'Cherry Leaf Counts'),
-(11, 'Cherry_Healthy'),
-(12, 'Cherry_Powdery Mildew'),
-(13, 'Citrus Leaf Counts'),
-(14, 'Citrus_Citrus Greening June'),
-(15, 'Citrus_Citrus Greening Oct.'),
-(16, 'Grape Leaf Counts'),
-(17, 'Grape_Black Measles Fungus'),
-(18, 'Grape_Black Rot Fungus'),
-(19, 'Grape_Leaf Blight Fungus'),
-(20, 'Peach Leaf Counts'),
-(21, 'Peach_Bacterial Spot'),
-(22, 'Peach_Healthy'),
-(23, 'Pepper Leaf Counts'),
-(24, 'Pepper_Bac spot NREC'),
-(25, 'Pepper_Bacterial Spot JR'),
-(26, 'Pepper_Healthy'),
-(27, 'Potato Leaf Counts'),
-(28, 'Potato_Early Blight Fungus'),
-(29, 'Potato_Healthy Potato'),
-(30, 'Potato_Late Blight Fungus'),
-(31, 'Raspberry Leaf Counts'),
-(32, 'Raspberry_Sheet1'),
-(33, 'Soy Leaf Counts'),
-(34, 'Soy_Sheet1'),
-(35, 'Strawberry Leaf Counts'),
-(36, 'Strawberry_Healthy'),
-(37, 'Strawberry_Scorch'),
-(38, 'Tomato Leaf Counts'),
-(39, 'Tomato_Bacterial Spot Bacteria'),
-(40, 'Tomato_Early Blight Fungus'),
-(41, 'Tomato_Healthy'),
-(42, 'Tomato_Late Blight Water Mold'),
-(43, 'Tomato_Leaf Mold Fungus'),
-(44, 'Tomato_Septoria Leaf Spot Fungus'),
-(45, 'Tomato_Spider Mite Damage Insect'),
-(46, 'Tomato_Target Spot Bacteria'),
-(47, 'Tomato_YLCV Virus');
+INSERT INTO `disease` (`id`, `name`, `nice_name`) VALUES
+(1, 'Apple Leaf Counts', NULL),
+(2, 'Apple_Cedar Apple Rust', NULL),
+(3, 'Apple Leaf Counts', NULL),
+(4, 'Apple_Cedar Apple Rust', NULL),
+(5, 'Apple_Frogeye Spot', NULL),
+(6, 'Apple_Healthy', NULL),
+(7, 'Apple_Scab', 'Apple Scab'),
+(8, 'Blueberry Leaf Counts', NULL),
+(9, 'Blueberry_Healthy', NULL),
+(10, 'Cherry Leaf Counts', NULL),
+(11, 'Cherry_Healthy', NULL),
+(12, 'Cherry_Powdery Mildew', NULL),
+(13, 'Citrus Leaf Counts', NULL),
+(14, 'Citrus_Citrus Greening June', NULL),
+(15, 'Citrus_Citrus Greening Oct.', NULL),
+(16, 'Grape Leaf Counts', NULL),
+(17, 'Grape_Black Measles Fungus', NULL),
+(18, 'Grape_Black Rot Fungus', NULL),
+(19, 'Grape_Leaf Blight Fungus', NULL),
+(20, 'Peach Leaf Counts', NULL),
+(21, 'Peach_Bacterial Spot', NULL),
+(22, 'Peach_Healthy', NULL),
+(23, 'Pepper Leaf Counts', NULL),
+(24, 'Pepper_Bac spot NREC', NULL),
+(25, 'Pepper_Bacterial Spot JR', NULL),
+(26, 'Pepper_Healthy', NULL),
+(27, 'Potato Leaf Counts', NULL),
+(28, 'Potato_Early Blight Fungus', NULL),
+(29, 'Potato_Healthy Potato', NULL),
+(30, 'Potato_Late Blight Fungus', NULL),
+(31, 'Raspberry Leaf Counts', NULL),
+(32, 'Raspberry_Sheet1', NULL),
+(33, 'Soy Leaf Counts', NULL),
+(34, 'Soy_Sheet1', NULL),
+(35, 'Strawberry Leaf Counts', NULL),
+(36, 'Strawberry_Healthy', NULL),
+(37, 'Strawberry_Scorch', NULL),
+(38, 'Tomato Leaf Counts', NULL),
+(39, 'Tomato_Bacterial Spot Bacteria', NULL),
+(40, 'Tomato_Early Blight Fungus', NULL),
+(41, 'Tomato_Healthy', NULL),
+(42, 'Tomato_Late Blight Water Mold', NULL),
+(43, 'Tomato_Leaf Mold Fungus', NULL),
+(44, 'Tomato_Septoria Leaf Spot Fungus', NULL),
+(45, 'Tomato_Spider Mite Damage Insect', NULL),
+(46, 'Tomato_Target Spot Bacteria', NULL),
+(47, 'Tomato_YLCV Virus', NULL);
 
 -- --------------------------------------------------------
 
