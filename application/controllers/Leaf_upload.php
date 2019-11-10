@@ -25,7 +25,7 @@ class Leaf_upload extends CI_Controller{
     public function predict_Disease(){
        
         $file=$this->input->post('file');
-     
+        var_dump($_POST["data"]);
      //   $config['upload_path']          = '../../uploads/';
      //   $config['allowed_types']        = 'gif|jpg|png';
     //    $config['max_size']             = 10000;

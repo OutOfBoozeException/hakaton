@@ -1,6 +1,6 @@
 <?php 
    //var_dump($drugAndProd);
    
-    echo "<br> <br>" . $drugAndProd['drugName'] . "<br> <br>" . $drugAndProd['name'] . "<br> <br>" . $drugAndProd['description'];
+    echo "<br> <br>" . $drugAndProd['drugName'] . "<br> <br>" . $drugAndProd['name'] . "<br> <br>" . $drugAndProd['description'].'<br><br>'.$instructions['instructions'];
 
 ?>

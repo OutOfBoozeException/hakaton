@@ -5,8 +5,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 $route['default_controller'] = 'pages/view';
 $route['leaf_upload']='leaf_upload/view';
-$route['cures/(:any)']='cures/view/$1';
-$route['drugs/(:any)']='drugs/view/$1';
+$route['cures/(:any)/(:any)/(:any)']='cures/view/$1/$2/$3';
+$route['drugs/(:any)/(:any)']='drugs/view/$1/$2';
 #$route['cures/(:any)']='cure/view/$1';
 $route['randoms']='randoms/view';
 $route['(:any)']='pages/view/$1';

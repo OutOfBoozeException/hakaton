@@ -1,6 +1,6 @@
-<?php 
-  //  echo form_open('leaf_upload/predict_disease'); ?>
-	<form method="post" name="upload" >
+<?php
+//  echo form_open('leaf_upload/predict_disease'); ?>
+	<form method="post" name="upload" id="ovo-f" enctype="multipart/form-data">
     <div class="container">
         <div class="col-md-8 col-md-offset-2">
             <p style="margin-top: 50px">
@@ -16,9 +16,11 @@
 				width: 170px;
 				padding-top: 10px"
 			>
+			
                 <input type="file" name="file" id="file" size="20" style="margin-top:30px;"/>
-                <input type="submit" id="submit" class="submit" value="upload" style="margin:30px 20px; padding:10px 50px; color: #f4623a; font-weight:700; 
+                <input type="button" id="submit" class="submit" value="upload" style="margin:30px 20px; padding:10px 50px; color: #f4623a; font-weight:700; 
                 border:2px solid #f4623a; border-radius: 20px" />
+               
             </div>
         </div>
     </div>
@@ -33,28 +35,28 @@
                 var file = fileInput.files[0];
                 var formData = new FormData();
                 formData.append('image', file);
-                // console.log(file);
-                
-               
-                
-                $.ajax({
-                    url: "http://localhost:5005/api/clasify_image",
-                    type: "POST",
-                    data: "file="+file,
-                    cache: false,
-                    
-                    success: function(reponse) {
-                        if(reponse) {
-                            alert(reponse);
-                            
-                            // console.log(reponse);
-                            // $('#devis').trigger("reset");
-                        } else {
-                            alert('Error');
-                        }
-                    }
-                });
+                console.log(file);
+				alert("Pera");
+				
+				$.ajax({
+					url: "http://localhost:5005/api/classify_image",
+					enctype: "multipart/form-data",
+					processData: false,
+					contentType: false,
+					cache: false,
+					type: "POST",
+				//	timeout: 600000,
+					crossDomain: true,
+					data: formData,
+							
+							success: function(data){
+								//console.log(data);
+								var x=data[1]*100-Math.round(data[1]*100);
+								window.location.replace("<?php  echo base_url().'cures/'?>"+data[0]+'/'+Math.round(data[1]*100)+'/'+Math.round(x*100));
+								
+							}
+				 });
             }); });
             </script>
             
-            
+          
