@@ -4,8 +4,8 @@ class Data_model extends CI_Model{
         $this->load->database();
     }
     
-    public function getCures($diseaseName){
-       $query= $this->db->query("SELECT drug.name, drug.id
+    public function getCuresByDiseaseName($diseaseName){
+       $query= $this->db->query("SELECT drug.name, drug.id,disease.nice_name
                            FROM cure
                             LEFT JOIN drug ON cure.drugId=drug.id
                             LEFT JOIN  disease ON disease.id=cure.diseaseId
@@ -13,6 +13,17 @@ class Data_model extends CI_Model{
         
      
        return $query->result('array');
+    }
+    
+    public function getCuresByDiseaseId($diseaseId){
+        $query=$this->db->query("SELECT disease.name from disease where disease.id=$diseaseId");
+        $array=$query->result('array');
+        $diseaseName=$array[0]['name'];
+        
+        $result = $this->Data_model->getCuresByDiseaseName($diseaseName);
+   
+        
+        return $result;
     }
     public function getCureById($diseaseId, $drugId) {
         $query= $this->db->query("SELECT cure.instructions FROM cure
@@ -25,7 +36,7 @@ class Data_model extends CI_Model{
     }
     
     public function getDiseaseById($diseaseId) {
-        $query= $this->db->query("SELECT disease.name FROM disease
+        $query= $this->db->query("SELECT disease.nice_name FROM disease
                                   WHERE disease.id=$diseaseId");
         
         if (!$query->result()){

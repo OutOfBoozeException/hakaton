@@ -41,8 +41,51 @@
 					crossDomain: true,
 					data: formData,	
 					success: function(data){
-						var x=data[1]*100-Math.round(data[1]*100);
-						window.location.replace("<?php  echo base_url().'cures/'?>"+data[0]+'/'+Math.round(data[1]*100)+'/'+Math.round(x*100));
+						var x=Math.abs(data[1]*100-Math.floor(data[1]*100));
+						var dictionary=new Object();
+						//making dictionary
+								dictionary["Blueberry___healthy"]= 48;
+                                dictionary["Apple___healthy"]= 49;
+                                dictionary["Apple___Black_rot"]= 50;
+                                dictionary["Tomato___Tomato_mosaic_virus"]= 51;
+                                dictionary["Apple___Cedar_apple_rust"]= 52;
+                                dictionary["Apple___Apple_scab"]= 53;
+                                dictionary["Pepper,_bell___healthy"]= 54;
+                                dictionary["Peach___healthy"]= 55;
+                                dictionary["Tomato___Late_blight"]= 56;
+                                dictionary["Tomato___Septoria_leaf_spot"]= 57;
+                                dictionary["Soybean___healthy"]= 58;
+                                dictionary["Potato___healthy"]= 59;
+                                dictionary["Tomato___Early_blight"]= 60;
+                                dictionary["Cherry_(including_sour)___healthy"]= 61;
+                                dictionary["Peach___Bacterial_spot"]= 62;
+                                dictionary["Pepper,_bell___Bacterial_spot"]= 63;
+                                dictionary["Tomato___healthy"]= 64;
+                                dictionary["Tomato___Spider_mites Two-spotted_spider_mite"]= 65;
+                                dictionary["Tomato___Target_Spot"]= 66;
+                                dictionary["Raspberry___healthy"]= 67;
+                                dictionary["Strawberry___healthy"]= 68;
+                                dictionary["Orange___Haunglongbing_(Citrus_greening)"]= 69;
+                                dictionary["Cherry_(including_sour)___Powdery_mildew"]= 70;
+                                dictionary["Potato___Late_blight"]= 71;
+                                dictionary["Tomato___Leaf_Mold"]= 72;
+                                dictionary["Tomato___Tomato_Yellow_Leaf_Curl_Virus"]= 73;
+                                dictionary["Grape___Black_rot"]= 74;
+                                dictionary["Grape___healthy"]= 75;
+                                dictionary["Grape___Esca_(Black_Measles)"]= 76;
+                                dictionary["Strawberry___Leaf_scorch"]= 77;
+                                dictionary["Corn_(maize)___Common_rust_"]= 78;
+                                dictionary["Potato___Early_blight"]= 79;
+                                dictionary["Corn_(maize)___Northern_Leaf_Blight"]= 80;
+                                dictionary["Tomato___Bacterial_spot"]= 81;
+                                dictionary["Corn_(maize)___healthy"]= 82;
+                                dictionary["Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot"]= 83;
+                                dictionary["Squash___Powdery_mildew"]= 84;
+                                dictionary["Grape___Leaf_blight_(Isariopsis_Leaf_Spot)"]= 85;
+								diseaseId=dictionary[data[0]];
+							
+						//done making dictionary
+						window.location.replace("<?php  echo base_url().'cures/'?>"+diseaseId+'/'+Math.round(data[1]*100)+'/'+Math.floor(x*100));
 					}
 				 });
             }); 
