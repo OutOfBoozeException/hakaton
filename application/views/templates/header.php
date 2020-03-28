@@ -1,22 +1,29 @@
 <html>
 
 	<head>
+		
 		<title>LeafSaver</title>
 		<link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.min.css">
 		<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/style.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
 		<script src="http://cdn.ckeditor.com/4.10.1/standard/ckeditor.js"></script>
+	
 		<link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+		
 		<link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+		
 		<link href="<?php echo base_url() . 'assets/index/vendor/fontawesome-free/css/all.min.css' ?>" rel="stylesheet" type="text/css">
+		
 		<link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet">
 		<link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
+		
 	</head>
 	
 	<body style="background-image: url('https://images.pexels.com/photos/1103970/pexels-photo-1103970.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260')">
 		<nav class="navbar navbar-expand-lg" style="background-color:#ffffff !important">
 			<div class="container">
-				<a class="navbar-brand" href="<?php echo base_url(); ?>" style="color: #f4623a !important; font-weight: 800 !important;">LeafSaver</a>
+				<a class="navbar-brand" href="<?php echo base_url() . "leaf_upload"; ?>" style="color: #f4623a !important; font-weight: 800 !important;">LeafSaver</a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
@@ -71,3 +78,6 @@
 			<?php if ($this->session->flashdata('user_loggedout')): ?>
 				<?php echo '<p class="alert alert-success">'.$this->session->flashdata('user_loggedout').'</p>'; ?>
 			<?php endif; ?>
+			
+			
+					

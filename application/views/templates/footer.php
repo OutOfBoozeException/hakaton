@@ -1,3 +1,6 @@
+		<script>
+			CKEDITOR.replace( 'editor1' );
+		</script>
 		<div class="foot">
 			<img src="https://i.imgur.com/g6uKIvh.png" style="float:right; margin-right:40px">
 		</div>
